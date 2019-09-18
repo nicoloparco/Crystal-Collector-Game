@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body class="bg-primary">
+    <header>
+        <div class="jumbotron bg-dark border-bottom 4px border-light">
+            <div class="row justify-content-center">
+                <div class="col-med text-light">
+                    <h1 class="font-weight-bold">Crystal Collector Game</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-responsive">
+        <div class="row justify-content-between bg-info my-5 border 4px border-light" id="game-text">
+            <div class="col-med mx-5 my-5 text-light">
+                <p>Welcome to the Crystal Collector Game!</p>
+                <p>Each crystal you see gives a different numerical value when clicked</p>
+                <p>Try to match the given number using different combinations of crystals</p>
+            </div>
+        
+            <div class="col-med mx-5 my-5 text-light">
+                <p>Number to Reach</p>
+                <div id="goal-number"></div>
+                <p>Current Number</p>
+                <div id="current-number"></div>
+                <p>Wins</p>
+                <div id="wins"></div>
+                <p>Losses</p>
+                <div id="losses"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="crystal-images">
+        <div class="col-med-3 mx-5">
+            <button><img src="/assets/images/amethyst-picture.jpeg" alt="amethyst" class="crystals">
+            <p class="font-weight-bold">Amethyst</p>
+        </div>
+        <div class="col-med-3 mx-5">
+            <button><img src="/assets/images/emerald-image.jpeg" alt="emerald" class="crystals">
+            <p class="font-weight-bold">Emerald</p>
+        </div>
+        <div class="col-med-3 mx-5">
+            <button><img src="/assets/images/ruby-image.jpeg" alt="ruby" class="crystals">
+            <p class="font-weight-bold">Ruby</p>
+        </div>
+        <div class="col-med-3 mx-5">
+            <button><img src="/assets/images/sapphire-image.jpeg" alt="sapphire" class="crystals">
+            <p class="font-weight-bold">Sapphire</p>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="/assets/javascript/source.js"></script>
+</body>
+</html>
