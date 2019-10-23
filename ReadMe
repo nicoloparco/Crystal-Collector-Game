@@ -1,0 +1,9 @@
+#Features
+The Crystal Collector Game is a javascript and jQuery driven game that assigns random values to several crystals. 
+Each time a crystal is clicked its value is determined and added to the page. This value then contributes to your current score.
+A randomly score to reach is generated each time and the goal of the game is to hit the score exactly without going over.
+Each time the score is reached a win will be tallied and each time it goes over a loss will be tallied.
+This project is also styled using Bootstrap.
+
+#Link
+A live link to the deplyoed page is included here: https://nicoloparco.github.io/Crystal-Collector-Game/
