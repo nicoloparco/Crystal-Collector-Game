@@ -10,16 +10,14 @@ var targetNumber = Math.floor(Math.random() * 101) + 19;
 
 //Function to generate random number for each crystal using for loop
 function crystalNumbers () {
-    for (var i = 0; i < 4; i++) {
-    var randomNumber = Math.floor(Math.random() * 11) + 1;
-    var crystalNumber = $("<div>");
-    crystalNumber.attr({
-        "class" : "crystalData",
-        "data-number" : randomNumber
-    });
-    crystalNumber.html(randomNumber);
-    $(".crystals").append(crystalNumber);
-    }
+    
+    $(".crystals").each(function () {
+        var randomNumber = Math.floor(Math.random() *11)+1;
+        $(this).attr({
+            "class": "crystalData",
+            "data-number": randomNumber
+        })
+    })
 };
 
 //Function to generate target number for each game
@@ -33,8 +31,11 @@ generateNumber();
 
 
 //Function to add value of crystal to current score on click
-$(".crystals").on("click", function () {
-    var value = parseInt($(".crystalData").attr("data-number"));
+$(".crystalData").on("click", function () {
+    
+    var value = Number($(this).attr("data-number"));
+    console.log(value)
+
     currentScore = startingScore += value;
     $("#current-number").text(currentScore);
     winLose();
@@ -57,9 +58,13 @@ function winLose () {
 
 //Reset function
 function resetGame () {
+    console.log(currentScore, "before");
     $("#current-number").empty();
     currentScore = 0;
+    console.log(currentScore, "after");
     $("#goal-number").empty();
+   
+    $("#current-number").attr("val", currentScore);
     crystalNumbers();
     generateNumber();
 }
