@@ -34,7 +34,6 @@ generateNumber();
 $(".crystalData").on("click", function () {
     
     var value = Number($(this).attr("data-number"));
-    console.log(value)
 
     currentScore = startingScore += value;
     $("#current-number").text(currentScore);
@@ -58,13 +57,10 @@ function winLose () {
 
 //Reset function
 function resetGame () {
-    console.log(currentScore, "before");
     $("#current-number").empty();
-    currentScore = 0;
-    console.log(currentScore, "after");
+    startingScore = 0;
     $("#goal-number").empty();
    
-    $("#current-number").attr("val", currentScore);
     crystalNumbers();
     generateNumber();
 }
